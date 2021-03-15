@@ -5,17 +5,17 @@ imma just throw things that work in here
 # Table of Contents
 
 + [Reconaissance](#reconaissance)
-  1. [Port Scanning](#port-scanning)
-  2. [Directory Enumeration](#directory-enumeration)
-  3. [Header Analysis](#header-analysis)
+    1. [Port Scanning](#port-scanning)
+    2. [Directory Enumeration](#directory-enumeration)
+    3. [Header Analysis](#header-analysis)
 + [Exploitation](#exploitation)
 + [Post-Exploitation Enumeration](#post-exploitation)
 + [Privilege Escalation](#privilege-escalation)
-  1. [Linux](#linux-privesc)
-  2. [Windows](#windows-privesc)
-    - The Basics
-    - Payloads
-    - Privesc Enumeration Tools
+    1. [Linux](#linux-privesc)
+    2. [Windows](#windows-privesc)
+        - The Basics
+        - Payloads
+        - Privesc Enumeration Tools
 
 
 ## Reconaissance
