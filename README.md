@@ -13,9 +13,9 @@ imma just throw things that work in here
 + [Privilege Escalation](#privilege-escalation)
   1. [Linux](#linux-privesc)
   2. [Windows](#windows-privesc)
-    1. The Basics
-    2. Payloads
-    3. Privesc Enumeration
+    - The Basics
+    - Payloads
+    - Privesc Enumeration Tools
 
 
 ## Reconaissance
