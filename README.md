@@ -22,10 +22,10 @@ imma just throw things that work in here
 
 ### Port Scanning
 full TCP scan
-> sudo nmap -sC -sV -O --open -p- -oA nmap/full [targets]
+> sudo nmap -sC -sV -O --open -p- -oA full-tcp [targets]
 
 full UDP scan
-> sudo nmap -sU -p- -oA nmap/udp [targets]
+> sudo nmap -sU -p- -oA full-udp [targets]
 
 scripts w/ ports
 > sudo nmap --scripts vuln,safe,discovery -p \[ports] [targets]
