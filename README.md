@@ -4,13 +4,35 @@ imma just throw things that work in here
 
 # Table of Contents
 
-1. [Example](#example)
-2. [Example2](#example2)
-3. [Third Example](#third-example)
-4. [Fourth Example](#fourth-examplehttpwwwfourthexamplecom)
++ [Reconaissance](#reconaissance)
+  1. [Port Scanning](#port-scanning)
+  2. [Directory Enumeration](#directory-enumeration)
+  3. [Header Analysis](#header-analysis)
++ [Exploitation](#exploitation)
++ [Post-Exploitation Enumeration](#post-exploitation)
++ [Privilege Escalation](#privilege-escalation)
+  1. [Linux](#linux-privesc)
+  2. [Windows](#windows-privesc)
 
 
-## Example
-## Example2
-## Third Example
-## [Fourth Example](http://www.fourthexample.com) 
+## Reconaissance
+
+### Port Scanning
+
+### Directory Enumeration
+
+### Header Analysis
+
+## Exploitation
+## Post-Exploitation
+## Privilege Escalation 
+
+### Linux Privesc
+
+First and foremost, [g0tmi1k's blog](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation) is more comprehensive than the commands I will list here.
+
+### Windows Privesc
+
+[FuzzySecurity's blog post](https://www.fuzzysecurity.com/tutorials/16.html)
+
+[Tib3rius's Windows PrivEsc course](https://www.udemy.com/course/windows-privilege-escalation/)
