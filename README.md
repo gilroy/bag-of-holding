@@ -21,17 +21,17 @@ imma just throw things that work in here
 ## Reconaissance
 
 ### Port Scanning
-####full TCP scan
+#### Full TCP scan
 ```bash
 sudo nmap -sC -sV -O --open -p- -oA full-tcp [targets]
 ```
 
-####full UDP scan
+#### Full UDP Scanning
 ```bash
 sudo nmap -sU -p- -oA full-udp [targets]
 ```
 
-####scripts w/ ports
+#### NSE Scripts with Ports
 ```bash
 sudo nmap --scripts vuln,safe,discovery -p \[ports] [targets]
 ```
