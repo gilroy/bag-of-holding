@@ -37,6 +37,9 @@ sudo nmap --scripts vuln,safe,discovery -p \[ports] [targets]
 ```
 
 ### Directory Enumeration
+```bash
+dirb 10.10.10.2 -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt 
+```
 
 ### Header Analysis
 
@@ -101,6 +104,15 @@ PsExec from Windows Sysinternals
 ```
 
 - **PrivEsc Enumeration Tools**
+
+[Windows  Exploit Suggester](https://github.com/GDSSecurity/Windows-Exploit-Suggester.git)
+```bash
+git clone https://github.com/GDSSecurity/Windows-Exploit-Suggester.git
+cd Windows-Exploit-Suggester/
+python2 windows-exploit-suggester.py --update
+
+cmd.exe /c systeminfo > systeminfo.txt
+```
 
 [PowerUp](https://raw.githubusercontent.com/PowerShellEmpire/PowerTools/master/PowerUp/PowerUp.ps1):
 ```bash
